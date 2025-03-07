@@ -8,7 +8,6 @@ import com.shop.cafe.dto.Member;
 
 @Service
 public class MemberService {
-	
 	@Autowired
 	MemberDao memberDao;
 	
@@ -16,4 +15,8 @@ public class MemberService {
 		memberDao.insertMember(m);
 	}
 
+	public Member login(Member m) throws Exception {
+		return memberDao.login(m);
+		
+	}
 }
